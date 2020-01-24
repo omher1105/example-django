@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container-form {
+        width: 30%;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<body>
+<form class="container-form" action="/persona" method="post">
+    {% csrf_token %}
+    <div class="form-field">
+        <label>Nombre</label>
+        <input name="nombre" type="text" value="{{ nombre }}">
+    </div>
+    <div class="form-field">
+        <label> apellido</label>
+        <input name="apellido" type="text">
+    </div>
+    <input type="submit" value="OK">
+</form>
+</body>
+</html>
